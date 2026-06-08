@@ -140,14 +140,14 @@ p {
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
-    box-shadow: 0 4px 14px rgba(0, 82, 204, 0.3);
+    box-shadow: 0 4px 14px rgba(11, 37, 69, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 82, 204, 0.4);
-    color: white;
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
 }
 
 .btn-secondary {
@@ -157,8 +157,8 @@ p {
 }
 
 .btn-secondary:hover {
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
     transform: translateY(-2px);
 }
 
@@ -237,18 +237,25 @@ html.dark-theme .logo .logo-dark {
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.nav-links a.active {
+    color: var(--accent-color) !important;
+    font-weight: 700;
 }
 
 .btn-primary-outline {
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--accent-color);
     padding: 8px 20px;
     border-radius: 50px;
-    color: var(--primary-color) !important;
+    color: var(--accent-color) !important;
+    background-color: transparent;
 }
 .btn-primary-outline:hover {
-    background-color: var(--primary-color);
-    color: white !important;
+    background-color: var(--accent-color);
+    color: var(--primary-color) !important;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
 }
 
 .hamburger {
@@ -407,8 +414,9 @@ html.dark-theme .logo .logo-dark {
 }
 
 .carousel-btn:hover {
-    background: var(--primary-color);
-    box-shadow: 0 4px 10px rgba(0, 82, 204, 0.3);
+    background: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
 }
 
 .btn-prev {
@@ -442,7 +450,7 @@ html.dark-theme .logo .logo-dark {
 }
 
 .carousel-indicator.active {
-    background: var(--primary-color);
+    background: var(--accent-color);
     width: 20px;
     border-radius: 10px;
 }
@@ -471,16 +479,17 @@ html.dark-theme .logo .logo-dark {
 }
 
 .filter-btn:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    background-color: rgba(0, 82, 204, 0.03);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(0, 188, 212, 0.03);
 }
 
 .filter-btn.active {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 82, 204, 0.2);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
 }
 
 /* Transiciones de filtrado para las tarjetas de proyectos */
@@ -1446,11 +1455,11 @@ html.dark-theme {
 
 /* Ajustes específicos de componentes en Modo Oscuro */
 html.dark-theme .navbar {
-    background: rgba(12, 26, 48, 0.85);
+    background: rgba(5, 19, 41, 0.85);
     border-color: var(--border-color);
 }
 html.dark-theme .navbar.scrolled {
-    background: rgba(12, 26, 48, 0.95);
+    background: rgba(5, 19, 41, 0.95);
     border-bottom: 1px solid var(--border-color);
 }
 html.dark-theme .btn-secondary {
@@ -1459,8 +1468,8 @@ html.dark-theme .btn-secondary {
     border-color: var(--border-color);
 }
 html.dark-theme .btn-secondary:hover {
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 html.dark-theme .course-card.featured {
     border-color: var(--primary-light);
@@ -1537,12 +1546,12 @@ html.dark-theme .card-img-wrapper::before {
     outline: none;
 }
 .theme-toggle-btn:hover {
-    background-color: rgba(9, 30, 66, 0.08);
-    color: var(--primary-color);
+    background-color: rgba(0, 188, 212, 0.08);
+    color: var(--accent-color);
 }
 html.dark-theme .theme-toggle-btn:hover {
     background-color: rgba(255, 255, 255, 0.08);
-    color: var(--primary-light);
+    color: var(--accent-color);
 }
 
 /* Efecto de rotación del icono al hacer click */
