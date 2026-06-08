@@ -620,7 +620,7 @@ html.dark-theme .logo .logo-dark {
 
 .stat-item i {
     font-size: 2.5rem;
-    color: var(--primary-light);
+    color: var(--accent-color); /* Cyan para visibilidad en tarjetas oscuras */
     margin-bottom: 16px;
 }
 
@@ -640,8 +640,8 @@ html.dark-theme .logo .logo-dark {
    Footer
    ========================================= */
 footer {
-    background-color: var(--text-main);
-    color: white;
+    background-color: #081C33; /* Siempre oscuro para contraste premium */
+    color: #a5adba;
     padding: 80px 0 24px;
 }
 
@@ -1567,6 +1567,37 @@ html.dark-theme .theme-toggle-btn:hover {
 }
 .theme-toggle-btn:active i {
     transform: rotate(360deg) scale(0.8);
+}
+
+/* =========================================
+   Estilos específicos de WhatsApp de marca
+   ========================================= */
+.btn-secondary i.fa-whatsapp {
+    color: #25D366; /* El icono es siempre verde WhatsApp */
+    transition: var(--transition);
+}
+
+/* Efecto de fondo verde WhatsApp en hover para botones que contienen whatsapp */
+.btn-secondary:has(.fa-whatsapp):hover {
+    border-color: #25D366 !important;
+    background-color: #25D366 !important;
+    color: white !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4) !important;
+}
+
+.btn-secondary:has(.fa-whatsapp):hover i.fa-whatsapp {
+    color: white !important; /* El icono cambia a blanco sobre fondo verde */
+}
+
+html.dark-theme .btn-secondary:has(.fa-whatsapp):hover {
+    border-color: #25D366 !important;
+    background-color: #25D366 !important;
+    color: white !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4) !important;
+}
+
+html.dark-theme .btn-secondary:has(.fa-whatsapp):hover i.fa-whatsapp {
+    color: white !important;
 }
 
 
