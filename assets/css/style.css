@@ -586,14 +586,15 @@ html.dark-theme .logo .logo-dark {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: var(--primary-color);
-    color: white;
+    background: var(--accent-color);
+    color: var(--primary-color);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    z-index: 5;
 }
 
 .card-content {
@@ -922,8 +923,8 @@ footer h4 {
 
 .course-tag {
     align-self: flex-start;
-    background: rgba(0, 82, 204, 0.08);
-    color: var(--primary-color);
+    background: rgba(0, 188, 212, 0.1);
+    color: #0097A7;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -934,8 +935,8 @@ footer h4 {
 }
 
 .course-card.featured .course-tag {
-    background: var(--primary-color);
-    color: white;
+    background: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .featured-badge {
@@ -1112,8 +1113,8 @@ footer h4 {
 
 .badge-modal {
     align-self: flex-start;
-    background: var(--primary-color);
-    color: white;
+    background: var(--accent-color);
+    color: var(--primary-color);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -1526,6 +1527,12 @@ html.dark-theme .card-img-wrapper {
 html.dark-theme .card-img-wrapper::before {
     background-color: #102444;
     border-bottom-color: #1b355a;
+}
+
+/* Modo oscuro para los tags de curso */
+html.dark-theme .course-tag {
+    background: rgba(0, 188, 212, 0.15);
+    color: var(--accent-color);
 }
 
 /* Botón de Alternancia de Tema (Sleek Theme Toggle Button) */
