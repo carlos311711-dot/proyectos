@@ -2,11 +2,13 @@
    CSS Variables & Reset
    ========================================= */
 :root {
-    --primary-color: #0052cc;
-    --primary-light: #4c9aff;
-    --primary-dark: #0747a6;
+    --primary-color: #0B2545; /* Navy principal de Data Academy */
+    --primary-light: #134074; /* Navy medio para hovers */
+    --primary-dark: #081C33;  /* Navy oscuro */
+    --accent-color: #00BCD4;  /* Cyan brillante de Data Academy */
+    --accent-hover: #0097A7;  /* Cyan para hovers */
     --secondary-color: #25D366; /* WhatsApp Green */
-    --text-main: #172b4d;
+    --text-main: #0B2545;     /* Texto principal en Navy */
     --text-muted: #5e6c84;
     --bg-main: #ffffff;
     --bg-light: #f4f5f7;
@@ -73,7 +75,7 @@ img {
 }
 
 .highlight {
-    color: var(--primary-color);
+    color: var(--accent-color);
     position: relative;
     display: inline-block;
 }
@@ -84,7 +86,7 @@ img {
     height: 30%;
     bottom: 5px;
     left: 0;
-    background-color: rgba(76, 154, 255, 0.2);
+    background-color: rgba(0, 188, 212, 0.15);
     z-index: -1;
 }
 
@@ -203,15 +205,24 @@ p {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-main);
     display: flex;
     align-items: center;
-    gap: 8px;
 }
-.logo i {
-    color: var(--primary-color);
+.logo .logo-light {
+    display: block;
+    height: 38px;
+    width: auto;
+}
+.logo .logo-dark {
+    display: none;
+    height: 38px;
+    width: auto;
+}
+html.dark-theme .logo .logo-light {
+    display: none;
+}
+html.dark-theme .logo .logo-dark {
+    display: block;
 }
 
 .nav-links {
@@ -255,8 +266,8 @@ p {
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background: radial-gradient(circle at top right, rgba(76, 154, 255, 0.1), transparent 40%),
-                radial-gradient(circle at bottom left, rgba(0, 184, 217, 0.05), transparent 40%);
+    background: radial-gradient(circle at top right, rgba(0, 188, 212, 0.12), transparent 45%),
+                radial-gradient(circle at bottom left, rgba(11, 37, 69, 0.08), transparent 45%);
 }
 
 .hero-content {
@@ -274,12 +285,42 @@ p {
 
 .hero-carousel {
     position: relative;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg), 0 20px 40px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    aspect-ratio: 4 / 3;
-    background-color: #0c1a30; /* Fondo oscuro elegante */
+    aspect-ratio: 16 / 9; /* Relación de aspecto widescreen para dashboards */
+    background-color: #0c1a30;
     animation: float 6s ease-in-out infinite;
+    border: 1px solid rgba(0, 82, 204, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Simulador de navegador (Browser window header mockup) */
+.hero-carousel::before {
+    content: '';
+    display: block;
+    height: 32px;
+    background-color: #f4f5f7;
+    border-bottom: 1px solid #dfe1e6;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+/* Botones de control de ventana (Red, Yellow, Green) */
+.hero-carousel::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+    box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+    z-index: 11;
 }
 
 @keyframes float {
@@ -289,9 +330,10 @@ p {
 }
 
 .carousel-track-container {
-    height: 100%;
+    height: calc(100% - 32px); /* Desplazar el contenido debajo de la barra de navegación */
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .carousel-track {
@@ -485,13 +527,44 @@ p {
 
 .card-img-wrapper {
     position: relative;
-    height: 220px;
+    aspect-ratio: 16 / 9; /* Relación de aspecto estándar para dashboards */
+    width: 100%;
     overflow: hidden;
+    background-color: #f4f5f7;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mockup de navegador para tarjetas */
+.card-img-wrapper::before {
+    content: '';
+    display: block;
+    height: 24px;
+    background-color: #f4f5f7;
+    border-bottom: 1px solid #dfe1e6;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.card-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+    box-shadow: 12px 0 0 #ffbd2e, 24px 0 0 #27c93f;
+    z-index: 11;
 }
 
 .card-img-wrapper img {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 24px); /* Ajuste por la barra de mockup */
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -1007,14 +1080,18 @@ footer h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 24px;
     overflow: hidden;
 }
 
 .modal-image-side img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 350px;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain; /* Mostrar dashboard completo sin recortes */
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .modal-info-side {
@@ -1358,10 +1435,10 @@ footer h4 {
 html.dark-theme {
     --text-main: #f4f5f7;
     --text-muted: #a5adba;
-    --bg-main: #0c1a30; /* Azul noche elegante */
-    --bg-light: #071224;
-    --card-bg: #102444; /* Fondo de tarjetas */
-    --border-color: #1b355a;
+    --bg-main: #051329; /* Navy profundo premium */
+    --bg-light: #0B2545; /* Navy de Data Academy */
+    --card-bg: #0d2c52;  /* Navy medio para elevación visual */
+    --border-color: #133a6b;
     --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.25);
     --shadow-lg: 0 20px 30px rgba(0, 0, 0, 0.3);
@@ -1423,6 +1500,23 @@ html.dark-theme .tools-tags span {
 }
 html.dark-theme .hero-carousel {
     background-color: #071224;
+    border-color: #1b355a;
+}
+
+html.dark-theme .hero-carousel::before {
+    background-color: #102444;
+    border-bottom-color: #1b355a;
+}
+
+/* Modo oscuro para los mockups de tarjetas */
+html.dark-theme .card-img-wrapper {
+    background-color: #071224;
+    border-bottom-color: #1b355a;
+}
+
+html.dark-theme .card-img-wrapper::before {
+    background-color: #102444;
+    border-bottom-color: #1b355a;
 }
 
 /* Botón de Alternancia de Tema (Sleek Theme Toggle Button) */

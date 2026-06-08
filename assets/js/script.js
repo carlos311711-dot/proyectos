@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         p1: {
             title: "Dashboard Gerencial SaaS",
             category: "Power BI",
-            img: "assets/img/projects/dashboard.png",
+            img: "assets/img/projects/pyt_power_bi_2.png",
             desc: "Un panel de control ejecutivo integral diseñado para analizar las métricas de suscripción más críticas en empresas de software (SaaS). Permite evaluar el crecimiento mediante el MRR (Ingresos Recurrentes Mensuales), monitorear la retención con tasas de Churn y optimizar el gasto comercial analizando el CAC (Costo de Adquisición de Clientes) contra el LTV (Valor del Ciclo de Vida del Cliente).",
             tools: ["Power BI", "DAX", "Power Query", "Excel"],
             courseUrl: "pages/curso-powerbi.html",
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         p5: {
             title: "Análisis Retail & Ventas",
             category: "Power BI",
-            img: "assets/img/projects/dashboard.png",
+            img: "assets/img/projects/pyt_power_bi_2.png",
             desc: "Tablero analítico comercial que analiza las ventas de una cadena de retail nacional. Proporciona visualización detallada por sucursal, rendimiento de gerentes, análisis de canasta de compra e incorpora modelos predictivos sencillos hechos en DAX para proyectar la demanda de stock de los siguientes meses y evitar quiebres de inventario.",
             tools: ["Power BI", "DAX", "Modelado en Estrella", "Data Wrangling"],
             courseUrl: "pages/curso-powerbi.html",
