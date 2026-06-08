@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Automatización de Procesos con n8n & Make | Data Academy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-chart-pie"></i> Data Academy
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#proyectos">Proyectos</a></li>
+                <li><a href="../index.html#formacion">Formación</a></li>
+                <li><a href="../landing-ventas.html">Precios Cursos</a></li>
+                <li><a href="biografia.html">Profesores</a></li>
+                <li><a href="../index.html#contacto" class="btn-primary-outline">Contacto</a></li>
+            </ul>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <!-- Detail Hero Section -->
+    <header class="detail-hero">
+        <div class="container detail-container">
+            <a href="../index.html#formacion" class="btn-back"><i class="fas fa-arrow-left"></i> Volver a Formación</a>
+            <div class="detail-header" style="display: flex; align-items: center; gap: 24px;">
+                <div class="course-logo" style="margin-bottom: 0; width: 80px; height: 80px;">
+                    <img src="../assets/img/formation/n8n_logo.png" alt="n8n Icon" class="course-tool-logo">
+                </div>
+                <div>
+                    <span class="course-tag" style="margin-bottom: 8px; display: inline-block;">Curso en Vivo</span>
+                    <h1>Automatización de Procesos con n8n & Make</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Detail Content -->
+    <section class="detail-content">
+        <div class="container detail-container">
+            <div class="detail-grid">
+                <!-- Syllabus Side -->
+                <div class="info-side">
+                    <h3 class="detail-section-title"><i class="fas fa-book-open"></i> Temario del Curso</h3>
+                    
+                    <div class="syllabus-list">
+                        <div class="syllabus-module">
+                            <h4>Módulo 1: Fundamentos de APIs & Webhooks</h4>
+                            <p>Entendimiento de protocolos HTTP, llamadas GET/POST, headers, autenticación por Bearer token y captura de eventos en tiempo real con Webhooks.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Módulo 2: Modelado de Flujos en n8n</h4>
+                            <p>Estructuración de flujos con nodos de datos, condicionales IF, bucles, manejo de formatos JSON avanzados y persistencia de variables.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Módulo 3: Integración de Inteligencia Artificial (IA)</h4>
+                            <p>Integración de agentes de IA en flujos analíticos: llamadas automatizadas a la API de OpenAI (ChatGPT) para clasificación y enriquecimiento de datos de entrada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Brochure Side -->
+                <div class="visual-side">
+                    <h3 class="detail-section-title"><i class="fas fa-download"></i> Descargar Brochure</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Haz clic en la imagen a continuación para abrir y descargar el brochure completo del programa en PDF.</p>
+                    
+                    <!-- Clickable image to download Brochure -->
+                    <a href="https://drive.google.com/file/d/3_n8n_Brochure_Placeholder/view?usp=sharing" target="_blank" class="detail-image-wrapper">
+                        <img src="../assets/img/projects/n8n_flow.png" alt="Flyer n8n/Make Curso Detallado">
+                        <div class="image-overlay-msg">
+                            <i class="fab fa-google-drive"></i> Ver en Google Drive
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/3_n8n_Brochure_Placeholder/view?usp=sharing" target="_blank" class="btn btn-secondary" style="width: 100%; margin-top: 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                        Descargar Brochure PDF <i class="fab fa-google-drive"></i>
+                    </a>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-main);"><i class="fas fa-clock"></i> Detalles del Curso:</h4>
+                        <ul style="list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-calendar-alt" style="color: var(--primary-color); width: 20px;"></i> Sábados por la Mañana</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-laptop" style="color: var(--primary-color); width: 20px;"></i> Modalidad: Online En Vivo</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-award" style="color: var(--primary-color); width: 20px;"></i> Certificado de Aprobación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enrollment CTA -->
+            <div class="syllabus-module" style="text-align: center; padding: 40px; background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, rgba(32, 184, 88, 0.05) 100%); border: 1px dashed var(--secondary-color);">
+                <i class="fab fa-whatsapp" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 16px;"></i>
+                <h3 style="margin-bottom: 8px;">¿Listo para automatizar tus tareas operativas?</h3>
+                <p style="margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Conéctate a las sesiones en vivo y crea flujos que hagan el trabajo manual por ti.</p>
+                <a href="https://wa.me/?text=Hola,%20quiero%20inscribirme%20en%20el%20Curso%20de%20n8n%20y%20Make" class="btn btn-primary" style="background-color: var(--secondary-color); border: none;" target="_blank">Conversar con un asesor <i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content" style="grid-template-columns: 1fr; text-align: center; gap: 24px;">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo" style="justify-content: center;"><i class="fas fa-chart-pie"></i> Data Academy</a>
+                <p>Transformando datos complejos en decisiones estratégicas claras a través de Power BI y Automatizaciones.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Data Academy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones Abiertas | Data Academy</title>
+    <meta name="description" content="Venta de cursos en vivo y especializaciones en Power BI, SQL, n8n y Make en Data Academy. Precios de preventa disponibles.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-chart-pie"></i> Data Academy
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#proyectos">Proyectos</a></li>
+                <li><a href="#ofertas">Cursos & Precios</a></li>
+                <li><a href="pages/biografia.html">Profesores</a></li>
+                <li><a href="index.html#contacto" class="btn-primary-outline">Contacto</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Landing Hero -->
+    <header class="detail-hero" style="padding: 140px 0 80px; text-align: center; background: radial-gradient(circle at top, rgba(0, 82, 204, 0.1) 0%, transparent 60%), var(--bg-light);">
+        <div class="container detail-container" style="max-width: 800px;">
+            <span class="course-tag" style="background-color: var(--secondary-color); color: white; margin-bottom: 16px; display: inline-block;">¡Preventa Exclusiva Abierta!</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; color: var(--text-main);">
+                Acelera tu carrera profesional dominando la <span class="highlight">Analítica de Datos</span>
+            </h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 650px; margin: 0 auto 32px; line-height: 1.5;">
+                Aprende en vivo desde cero. Crea pipelines ETL, automatiza flujos operativos y diseña dashboards profesionales de nivel gerencial.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="#ofertas" class="btn btn-primary">Ver Cursos y Tarifas <i class="fas fa-chevron-down"></i></a>
+                <a href="https://wa.me/" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pricing & Offers Section -->
+    <section class="section" id="ofertas" style="background: var(--bg-main);">
+        <div class="container">
+            <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 56px;">
+                <span class="course-tag" style="margin-bottom: 12px; display: inline-block;">Nuestros Programas</span>
+                <h2>Invierte en tus Habilidades</h2>
+                <p>Clases interactivas en vivo vía Zoom, mentoría semanal, acceso a grabaciones de por vida y certificados de finalización válidos.</p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: stretch; margin-bottom: 50px;">
+                <!-- Course 1 -->
+                <div class="course-card" style="display: flex; flex-direction: column; height: 100%; border-top: 4px solid var(--primary-color);">
+                    <div class="course-tag" style="background-color: rgba(0, 82, 204, 0.08); color: var(--primary-color);">En Vivo</div>
+                    <h3 style="margin-top: 10px;">Power BI Avanzado & Storytelling</h3>
+                    <p class="course-desc">Domina DAX, modelado en estrella y técnicas de diseño visual para crear dashboards ejecutivos impactantes.</p>
+                    
+                    <div style="margin: 20px 0; background: var(--bg-light); padding: 16px; border-radius: 12px; text-align: center;">
+                        <span style="font-size: 0.9rem; text-decoration: line-through; color: var(--text-muted); display: block;">Precio Regular: S/ 250</span>
+                        <span style="font-size: 1.8rem; font-weight: 800; color: var(--text-main); display: block; margin: 4px 0;">S/ 149</span>
+                        <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 700; text-transform: uppercase;">Preventa (Primeros 5 cupos)</span>
+                    </div>
+
+                    <ul class="course-features" style="margin-bottom: 24px;">
+                        <li><i class="fas fa-check"></i> +30 horas de clases en vivo</li>
+                        <li><i class="fas fa-check"></i> 5 Proyectos empresariales</li>
+                        <li><i class="fas fa-check"></i> Sesión de optimización de CV</li>
+                    </ul>
+                    
+                    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/?text=Hola,%20quiero%20inscribirme%20en%20el%20Curso%20de%20Power%20BI%20con%20tarifa%20preventa%20de%20S/149" class="btn btn-primary" target="_blank" style="width: 100%; background-color: var(--secondary-color);">Inscribirme <i class="fab fa-whatsapp"></i></a>
+                        <a href="pages/curso-powerbi.html" class="btn btn-secondary" style="width: 100%;">Ver Temario Completo</a>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card" style="display: flex; flex-direction: column; height: 100%; border-top: 4px solid var(--primary-color);">
+                    <div class="course-tag" style="background-color: rgba(0, 82, 204, 0.08); color: var(--primary-color);">En Vivo</div>
+                    <h3 style="margin-top: 10px;">SQL para Análisis de Datos</h3>
+                    <p class="course-desc">Aprende modelado de bases de datos relacionales, consultas complejas, funciones de ventana y ETL con PostgreSQL.</p>
+                    
+                    <div style="margin: 20px 0; background: var(--bg-light); padding: 16px; border-radius: 12px; text-align: center;">
+                        <span style="font-size: 0.9rem; text-decoration: line-through; color: var(--text-muted); display: block;">Precio Regular: S/ 250</span>
+                        <span style="font-size: 1.8rem; font-weight: 800; color: var(--text-main); display: block; margin: 4px 0;">S/ 149</span>
+                        <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 700; text-transform: uppercase;">Preventa (Primeros 5 cupos)</span>
+                    </div>
+
+                    <ul class="course-features" style="margin-bottom: 24px;">
+                        <li><i class="fas fa-check"></i> +24 horas de clases en vivo</li>
+                        <li><i class="fas fa-check"></i> Casos reales de negocio</li>
+                        <li><i class="fas fa-check"></i> Soporte de dudas 24/7</li>
+                    </ul>
+
+                    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/?text=Hola,%20quiero%20inscribirme%20en%20el%20Curso%20de%20SQL%20con%20tarifa%20preventa%20de%20S/149" class="btn btn-primary" target="_blank" style="width: 100%; background-color: var(--secondary-color);">Inscribirme <i class="fab fa-whatsapp"></i></a>
+                        <a href="pages/curso-sql.html" class="btn btn-secondary" style="width: 100%;">Ver Temario Completo</a>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card" style="display: flex; flex-direction: column; height: 100%; border-top: 4px solid var(--primary-color);">
+                    <div class="course-tag" style="background-color: rgba(0, 82, 204, 0.08); color: var(--primary-color);">En Vivo</div>
+                    <h3 style="margin-top: 10px;">n8n & Make Automatización</h3>
+                    <p class="course-desc">Conecta APIs, CRMs y herramientas de Inteligencia Artificial (IA) sin código complejo. Ahorra horas manuales.</p>
+                    
+                    <div style="margin: 20px 0; background: var(--bg-light); padding: 16px; border-radius: 12px; text-align: center;">
+                        <span style="font-size: 0.9rem; text-decoration: line-through; color: var(--text-muted); display: block;">Precio Regular: S/ 200</span>
+                        <span style="font-size: 1.8rem; font-weight: 800; color: var(--text-main); display: block; margin: 4px 0;">S/ 120</span>
+                        <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 700; text-transform: uppercase;">Preventa (Primeros 5 cupos)</span>
+                    </div>
+
+                    <ul class="course-features" style="margin-bottom: 24px;">
+                        <li><i class="fas fa-check"></i> +20 horas de clases en vivo</li>
+                        <li><i class="fas fa-check"></i> Integración ChatGPT & Webhooks</li>
+                        <li><i class="fas fa-check"></i> Plantillas listas para usar</li>
+                    </ul>
+
+                    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/?text=Hola,%20quiero%20inscribirme%20en%20el%20Curso%20de%20n8n%20y%20Make%20con%20tarifa%20preventa%20de%20S/120" class="btn btn-primary" target="_blank" style="width: 100%; background-color: var(--secondary-color);">Inscribirme <i class="fab fa-whatsapp"></i></a>
+                        <a href="pages/curso-n8n.html" class="btn btn-secondary" style="width: 100%;">Ver Temario Completo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Specialization Offer -->
+            <div class="course-card featured" style="border: 2px solid var(--primary-color); background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%); padding: 40px; border-radius: 20px;">
+                <div class="featured-badge" style="background-color: var(--secondary-color); color: white;">Mejor Valor</div>
+                <div class="featured-grid-inner" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <span class="course-tag" style="background-color: var(--primary-color); color: white;">Especialización Recomendada</span>
+                        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--text-main);">Especialización en Ingeniería & Analítica de Datos</h3>
+                        <p class="course-desc" style="font-size: 1.05rem; margin-bottom: 20px;">
+                            El programa integral definitivo. Domina de extremo a extremo todo el ciclo de vida del dato: Extracción ETL (n8n/Make), almacenamiento relacional (SQL Server) y visualización comercial (Power BI).
+                        </p>
+                        <ul class="course-features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 0;">
+                            <li><i class="fas fa-check"></i> Ruta completa de 0 a Senior</li>
+                            <li><i class="fas fa-check"></i> Asesoría de CV y Bolsa laboral</li>
+                            <li><i class="fas fa-check"></i> Certificación Oficial</li>
+                            <li><i class="fas fa-check"></i> Ahorro de más del 40% vs separado</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center; background: white; padding: 28px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                        <span style="font-size: 0.95rem; text-decoration: line-through; color: var(--text-muted); display: block;">Precio Regular Separado: S/ 700</span>
+                        <span style="font-size: 2.2rem; font-weight: 900; color: var(--primary-color); display: block; margin: 8px 0;">S/ 349</span>
+                        <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 20px;">Pago único o en cuotas sin intereses</span>
+                        <a href="https://wa.me/?text=Hola,%20quiero%20inscribirme%20en%20la%20Especializacion%20Completa%20de%20Datos%20con%20tarifa%20especial%20de%20S/349" class="btn btn-primary" target="_blank" style="width: 100%; background-color: var(--secondary-color); margin-bottom: 12px;">Comprar Especialización <i class="fab fa-whatsapp"></i></a>
+                        <a href="pages/especializacion-datos.html" class="btn btn-secondary" style="width: 100%;">Detalles de la Ruta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center" style="max-width: 600px; margin: 0 auto 56px;">
+                <span class="course-tag" style="margin-bottom: 12px; display: inline-block;">Testimoniales</span>
+                <h2>Casos de Éxito de Alumnos</h2>
+                <p>Nuestros graduados transforman su día a día aplicando estas herramientas en empresas reales.</p>
+            </div>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div class="course-card" style="padding: 30px;">
+                    <div style="display: flex; gap: 4px; color: #ffab00; margin-bottom: 16px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">"El curso de Power BI me permitió automatizar los reportes semanales de mi área en el banco. Lo que antes me tomaba 2 días enteros de trabajo manual en Excel, ahora se actualiza con un solo clic y tiene un diseño espectacular."</p>
+                    <h4 style="margin-bottom: 2px; color: var(--text-main);">Carlos Mendoza</h4>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Analista de Finanzas</span>
+                </div>
+                <div class="course-card" style="padding: 30px;">
+                    <div style="display: flex; gap: 4px; color: #ffab00; margin-bottom: 16px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">"Entré a la Especialización sin saber nada de SQL. Los profesores explican muy bien paso a paso. Terminé diseñando una base de datos de prueba y gracias a las mentorías de CV logré cambiarme de área como Analista de Datos BI."</p>
+                    <h4 style="margin-bottom: 2px; color: var(--text-main);">Mariana Rojas</h4>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Data Analyst Junior</span>
+                </div>
+                <div class="course-card" style="padding: 30px;">
+                    <div style="display: flex; gap: 4px; color: #ffab00; margin-bottom: 16px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">"El módulo de n8n valió cada centavo. Logré integrar el CRM de mi empresa con notificaciones de WhatsApp. Eliminamos el error de digitación y la velocidad de atención comercial aumentó exponencialmente."</p>
+                    <h4 style="margin-bottom: 2px; color: var(--text-main);">Jean Paul V.</h4>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Fundador E-commerce</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion FAQs Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <div class="section-header text-center" style="margin-bottom: 40px;">
+                <span class="course-tag" style="margin-bottom: 12px; display: inline-block;">Resolviendo Dudas</span>
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            
+            <div class="faq-container">
+                <details class="faq-item" style="border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 16px; padding: 16px 20px; transition: var(--transition); background: white;" open>
+                    <summary style="font-weight: 700; color: var(--text-main); font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+                        ¿Cuándo inician las clases y en qué horario se dictan?
+                        <span class="faq-icon" style="transition: transform 0.3s;"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                        Nuestros cursos inician de forma continua el próximo mes. El horario habitual para las clases en vivo es los días de semana (Martes y Jueves) en las noches, de 7:30 PM a 10:00 PM (Hora Perú/Colombia). Para n8n/Make se ofrecen también sesiones complementarias y soporte de fines de semana.
+                    </p>
+                </details>
+
+                <details class="faq-item" style="border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 16px; padding: 16px 20px; transition: var(--transition); background: white;">
+                    <summary style="font-weight: 700; color: var(--text-main); font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+                        ¿Qué pasa si no puedo asistir a una sesión en vivo?
+                        <span class="faq-icon" style="transition: transform 0.3s;"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                        No te preocupes. Todas las sesiones se graban en alta definición y se suben a nuestra plataforma estudiantil en un plazo máximo de 12 horas. Tendrás acceso de por vida a la plataforma de grabaciones y al repositorio de proyectos.
+                    </p>
+                </details>
+
+                <details class="faq-item" style="border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 16px; padding: 16px 20px; transition: var(--transition); background: white;">
+                    <summary style="font-weight: 700; color: var(--text-main); font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+                        ¿Necesito conocimientos previos para inscribirme?
+                        <span class="faq-icon" style="transition: transform 0.3s;"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                        No. Nuestros temarios están diseñados bajo una ruta incremental de aprendizaje. Empezamos desde las bases conceptuales y subimos gradualmente el nivel a través de talleres aplicados y proyectos dirigidos de negocio.
+                    </p>
+                </details>
+
+                <details class="faq-item" style="border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 16px; padding: 16px 20px; transition: var(--transition); background: white;">
+                    <summary style="font-weight: 700; color: var(--text-main); font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+                        ¿Qué métodos de pago aceptan?
+                        <span class="faq-icon" style="transition: transform 0.3s;"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                        Aceptamos transferencias bancarias locales directas (BCP, Interbank, BBVA), pagos con tarjeta de crédito/débito vía pasarela segura de Niubiz/Pay-Me, Yape/Plin, y pagos internacionales en dólares mediante PayPal. Ofrecemos financiamiento directo de hasta 2 cuotas sin intereses para la Especialización.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content" style="grid-template-columns: 2fr 1fr 1fr; gap: 40px;">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="color: white; margin-bottom: 16px;"><i class="fas fa-chart-pie"></i> Data Academy</a>
+                <p style="color: #a5adba; font-size: 0.95rem;">Transformando datos complejos en decisiones estratégicas claras a través de Power BI y Automatizaciones.</p>
+            </div>
+            <div class="footer-links">
+                <h4 style="color: white; margin-bottom: 16px;">Páginas</h4>
+                <ul>
+                    <li style="margin-bottom: 10px;"><a href="index.html" style="color: #a5adba;">Home Portafolio</a></li>
+                    <li style="margin-bottom: 10px;"><a href="pages/biografia.html" style="color: #a5adba;">Sobre Profesores</a></li>
+                    <li style="margin-bottom: 10px;"><a href="index.html#contacto" style="color: #a5adba;">Contacto Directo</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 style="color: white; margin-bottom: 16px;">Redes Sociales</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; color: #a5adba; font-size: 0.85rem;">
+            <p>&copy; 2026 Data Academy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

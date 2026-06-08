@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Power BI | Data Academy</title>
+    <meta name="description"
+        content="Portafolio de proyectos en Power BI. Dashboards gerenciales, análisis de datos y business intelligence.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-pie"></i> Data Academy
+            </a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="landing-ventas.html">Precios Cursos</a></li>
+                <li><a href="pages/biografia.html">Profesores</a></li>
+                <li><a href="#contacto" class="btn-primary-outline">Contacto</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <h1>Domina tus datos con <span class="highlight">Data Academy</span></h1>
+                <p>Explora nuestro portafolio de proyectos reales. Dashboards interactivos, modelos de datos optimizados
+                    y análisis gerencial SaaS para llevar tu negocio al siguiente nivel.</p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://wa.me/" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+            </div>
+            <div class="hero-carousel fade-in-up">
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide active">
+                            <img src="assets/img/home/dashboard.png" alt="Dashboard Power BI Preview">
+                            <div class="carousel-caption">Dashboard Gerencial Power BI</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="assets/img/home/n8n_flow.png" alt="n8n Automation Workflow">
+                            <div class="carousel-caption">Automatizaciones con n8n</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="assets/img/home/automate_flow.png" alt="Make / Power Automate Workflow">
+                            <div class="carousel-caption">Flujos en Make & Automate</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="assets/img/home/sql_project.png" alt="SQL Database Analysis">
+                            <div class="carousel-caption">Proyectos SQL Server & Modelado</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Navigation Controls -->
+                <button class="carousel-btn btn-prev" aria-label="Anterior slide"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn btn-next" aria-label="Siguiente slide"><i
+                        class="fas fa-chevron-right"></i></button>
+                <!-- Indicators -->
+                <div class="carousel-nav">
+                    <button class="carousel-indicator active" aria-label="Ir a slide 1"></button>
+                    <button class="carousel-indicator" aria-label="Ir a slide 2"></button>
+                    <button class="carousel-indicator" aria-label="Ir a slide 3"></button>
+                    <button class="carousel-indicator" aria-label="Ir a slide 4"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="proyectos">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Proyectos Destacados</h2>
+                <p>Explora mis desarrollos de dashboards, automatización de procesos y analítica de bases de datos.</p>
+            </div>
+
+            <!-- Filtros de Categorías (Sub-pestañas) -->
+            <div class="project-filters text-center fade-in">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                <button class="filter-btn" data-filter="n8n">n8n / Automate</button>
+                <button class="filter-btn" data-filter="sql">Proyectos SQL</button>
+                <button class="filter-btn" data-filter="integral">Proyectos Integrales</button>
+            </div>
+
+            <div class="grid" id="projects-grid">
+                <!-- Project 1 (Power BI) -->
+                <article class="card fade-in-up" data-category="powerbi">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/projects/dashboard.png" alt="Dashboard SaaS">
+                        <div class="badge">Power BI</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Dashboard Gerencial SaaS</h3>
+                        <p>Análisis integral de métricas clave (MRR, Churn, CAC) para empresas de software como
+                            servicio. Visualización interactiva en tiempo real.</p>
+                        <a href="javascript:void(0)" class="btn-link view-detail-btn" data-project-id="p1">Ver Detalle
+                            <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 2 (SQL) -->
+                <article class="card fade-in-up" data-category="sql" style="transition-delay: 0.1s;">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/projects/sql_project.png" alt="Optimización SQL">
+                        <div class="badge">SQL</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Optimización & Modelado SQL</h3>
+                        <p>Diseño de base de datos relacional para retail. Querys complejas, funciones de ventana y
+                            optimización de indexación para reportes rápidos.</p>
+                        <a href="javascript:void(0)" class="btn-link view-detail-btn" data-project-id="p2">Ver Detalle
+                            <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 3 (n8n) -->
+                <article class="card fade-in-up" data-category="n8n" style="transition-delay: 0.2s;">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/projects/n8n_flow.png" alt="Automatización n8n">
+                        <div class="badge">n8n</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Automatización CRM & WhatsApp</h3>
+                        <p>Flujo automatizado en n8n que conecta formularios web con HubSpot, enviando alertas
+                            automatizadas a WhatsApp e emails personalizados.</p>
+                        <a href="javascript:void(0)" class="btn-link view-detail-btn" data-project-id="p3">Ver Detalle
+                            <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 4 (Automate) -->
+                <article class="card fade-in-up" data-category="n8n" style="transition-delay: 0.3s;">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/projects/automate_flow.png" alt="Integración Make">
+                        <div class="badge">Make</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sincronización de Inventarios E-commerce</h3>
+                        <p>Integración automática con Make (Integromat) entre ERP central y Shopify, actualizando stock
+                            y precios cada hora de forma automatizada.</p>
+                        <a href="javascript:void(0)" class="btn-link view-detail-btn" data-project-id="p4">Ver Detalle
+                            <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 5 (Power BI) -->
+                <article class="card fade-in-up" data-category="powerbi" style="transition-delay: 0.4s;">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/projects/dashboard.png" alt="Retail & Ventas">
+                        <div class="badge">Power BI</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Análisis Retail & Ventas</h3>
+                        <p>Seguimiento de KPIs comerciales, análisis de rentabilidad por sucursal y pronósticos
+                            utilizando DAX avanzado y modelado estelar.</p>
+                        <a href="javascript:void(0)" class="btn-link view-detail-btn" data-project-id="p5">Ver Detalle
+                            <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 6 (Integral) -->
+                <article class="card fade-in-up" data-category="integral" style="transition-delay: 0.5s;">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/projects/integral_project.png" alt="Pipeline ETL Integral">
+                        <div class="badge">Integral</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pipeline ETL & Dashboard Integral</h3>
+                        <p>Automatización de extracción (n8n), almacenamiento estructurado (SQL Server) y visualización
+                            ejecutiva en tiempo real (Power BI).</p>
+                        <a href="javascript:void(0)" class="btn-link view-detail-btn" data-project-id="p6">Ver Detalle
+                            <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section (Cursos & Especializaciones) -->
+    <section class="formation section bg-light" id="formacion">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Cursos y Especializaciones</h2>
+                <p>Nuestros programas formativos en vivo diseñados para acelerar tu carrera en datos.</p>
+            </div>
+
+            <div class="grid formation-grid">
+                <!-- Course 1 (Power BI) -->
+                <div class="course-card" id="course-powerbi">
+                    <div class="course-logo">
+                        <img src="assets/img/formation/powerbi_logo.png" alt="Power BI Logo" class="course-tool-logo">
+                    </div>
+                    <div class="course-tag">Curso en Vivo</div>
+                    <h3>Power BI Avanzado & Storytelling</h3>
+                    <p class="course-desc">Domina DAX avanzado, modelado de datos estelar y técnicas profesionales de
+                        visualización y narración con datos.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> +30 horas de clases en vivo</li>
+                        <li><i class="fas fa-check"></i> Proyectos reales empresariales</li>
+                        <li><i class="fas fa-check"></i> Mentoría personalizada</li>
+                    </ul>
+                    <a href="pages/curso-powerbi.html" class="btn btn-primary course-cta">Ver Detalles <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Course 2 (SQL) -->
+                <div class="course-card" id="course-sql">
+                    <div class="course-logo">
+                        <img src="assets/img/formation/sql_logo.png" alt="SQL Logo" class="course-tool-logo">
+                    </div>
+                    <div class="course-tag">Curso en Vivo</div>
+                    <h3>SQL para Análisis de Datos</h3>
+                    <p class="course-desc">Aprende a diseñar, consultar y optimizar bases de datos relacionales con
+                        PostgreSQL. Funciones de ventana y ETL.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> +24 horas de clases en vivo</li>
+                        <li><i class="fas fa-check"></i> Resolución de casos de negocio</li>
+                        <li><i class="fas fa-check"></i> Acceso de por vida a grabaciones</li>
+                    </ul>
+                    <a href="pages/curso-sql.html" class="btn btn-primary course-cta">Ver Detalles <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Course 3 (n8n/Make) -->
+                <div class="course-card" id="course-n8n">
+                    <div class="course-logo">
+                        <img src="assets/img/formation/n8n_logo.png" alt="n8n Logo" class="course-tool-logo">
+                    </div>
+                    <div class="course-tag">Curso en Vivo</div>
+                    <h3>Automatización de Procesos con n8n & Make</h3>
+                    <p class="course-desc">Aprende a integrar APIs, CRM, WhatsApp y herramientas de IA sin escribir
+                        código complejo. Automatización de punta a punta.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> +20 horas de clases en vivo</li>
+                        <li><i class="fas fa-check"></i> Integración con ChatGPT y Webhooks</li>
+                        <li><i class="fas fa-check"></i> Plantillas de flujos listas para usar</li>
+                    </ul>
+                    <a href="pages/curso-n8n.html" class="btn btn-primary course-cta">Ver Detalles <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Specialization (Integral) -->
+                <div class="course-card featured" id="spec-integral">
+                    <div class="featured-badge">Más Completo</div>
+                    <div class="featured-grid-inner">
+                        <div class="featured-text-col">
+                            <div class="course-tag">Especialización</div>
+                            <h3>Especialización en Ingeniería & Analítica de Datos</h3>
+                            <p class="course-desc">El programa definitivo. Aprende a extraer datos con n8n, almacenarlos
+                                y modelarlos en SQL, y visualizarlos en Power BI.</p>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check"></i> Ruta completa de 0 a Senior</li>
+                                <li><i class="fas fa-check"></i> Certificación Data Academy</li>
+                                <li><i class="fas fa-check"></i> Bolsa de trabajo y asesoría de CV</li>
+                            </ul>
+                        </div>
+                        <div class="featured-visual-col">
+                            <img src="assets/img/formation/minimalist_combo.png" alt="Especialización Ingeniería de Datos"
+                                class="featured-tool-img">
+                            <a href="pages/especializacion-datos.html" class="btn btn-secondary course-cta">Ver Detalles <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <section class="stats-section section bg-light">
+                <div class="container">
+                    <div class="grid stats-grid">
+                        <div class="stat-item fade-in">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>+15</h3>
+                            <p>Proyectos Desarrollados</p>
+                        </div>
+                        <div class="stat-item fade-in" style="transition-delay: 0.1s;">
+                            <i class="fas fa-database"></i>
+                            <h3>+50M</h3>
+                            <p>Filas Procesadas</p>
+                        </div>
+                        <div class="stat-item fade-in" style="transition-delay: 0.2s;">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>100%</h3>
+                            <p>Enfoque en Resultados</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="contacto">
+                <div class="container footer-content">
+                    <div class="footer-brand">
+                        <a href="#" class="logo"><i class="fas fa-chart-pie"></i> Data Academy</a>
+                        <p>Transformando datos complejos en decisiones estratégicas claras a través de Power BI.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Enlaces</h4>
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#proyectos">Proyectos</a></li>
+                            <li><a href="landing-ventas.html">Precios Cursos</a></li>
+                            <li><a href="pages/biografia.html">Sobre Profesores</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <h4>Conéctate</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Data Academy. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+
+            <!-- Floating WhatsApp -->
+            <a href="https://wa.me/" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <!-- Project Details Modal -->
+            <div id="project-modal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-grid">
+                        <div class="modal-image-side">
+                            <img id="modal-project-img" src="" alt="Vista previa del proyecto">
+                        </div>
+                        <div class="modal-info-side">
+                            <span id="modal-project-badge" class="badge-modal"></span>
+                            <h2 id="modal-project-title"></h2>
+                            <p id="modal-project-desc"></p>
+                            <div class="modal-meta">
+                                <h4>Herramientas utilizadas:</h4>
+                                <div id="modal-project-tools" class="tools-tags"></div>
+                            </div>
+                            <div class="modal-cta-container">
+                                <button id="modal-course-link-btn" class="btn btn-primary">
+                                    Ver Curso Relacionado <i class="fas fa-graduation-cap"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="assets/js/script.js"></script>
+</body>
+
+</html>

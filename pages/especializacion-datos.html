@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialización en Ingeniería & Analítica de Datos | Data Academy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-chart-pie"></i> Data Academy
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#proyectos">Proyectos</a></li>
+                <li><a href="../index.html#formacion">Formación</a></li>
+                <li><a href="../landing-ventas.html">Precios Cursos</a></li>
+                <li><a href="biografia.html">Profesores</a></li>
+                <li><a href="../index.html#contacto" class="btn-primary-outline">Contacto</a></li>
+            </ul>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <!-- Detail Hero Section -->
+    <header class="detail-hero">
+        <div class="container detail-container">
+            <a href="../index.html#formacion" class="btn-back"><i class="fas fa-arrow-left"></i> Volver a Formación</a>
+            <div class="detail-header" style="display: flex; align-items: center; gap: 24px;">
+                <div class="course-logo" style="margin-bottom: 0; width: 80px; height: 80px;">
+                    <img src="../assets/img/formation/minimalist_combo.png" alt="Specialization Combo Icon" class="course-tool-logo">
+                </div>
+                <div>
+                    <span class="course-tag" style="margin-bottom: 8px; display: inline-block; background-color: var(--primary-color); color: white;">Especialización</span>
+                    <h1>Especialización en Ingeniería & Analítica de Datos</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Detail Content -->
+    <section class="detail-content">
+        <div class="container detail-container">
+            <div class="detail-grid">
+                <!-- Syllabus Side -->
+                <div class="info-side">
+                    <h3 class="detail-section-title"><i class="fas fa-book-open"></i> Ruta de Aprendizaje</h3>
+                    
+                    <div class="syllabus-list">
+                        <div class="syllabus-module">
+                            <h4>Fase 1: Extracción & Pipeline ETL (n8n & Make)</h4>
+                            <p>Domina la integración de APIs, la recolección automática de datos de diversas fuentes de negocio en la nube y su flujo constante.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Fase 2: Modelado Relacional & Almacenamiento (SQL)</h4>
+                            <p>Crea almacenes de datos robustos (Data Warehouses) optimizados para consultas. Escribe consultas de alta dificultad para calcular métricas comerciales de forma directa.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Fase 3: Visualización de Negocio (Power BI)</h4>
+                            <p>Conecta bases de datos y diseña dashboards interactivos y profesionales, aplicando reglas estéticas y storytelling con datos para cautivar a la gerencia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Brochure Side -->
+                <div class="visual-side">
+                    <h3 class="detail-section-title"><i class="fas fa-download"></i> Descargar Brochure</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Haz clic en la imagen a continuación para abrir y descargar el plan de estudios completo del programa en PDF.</p>
+                    
+                    <!-- Clickable image to download Brochure -->
+                    <a href="https://drive.google.com/file/d/4_Especializacion_Brochure_Placeholder/view?usp=sharing" target="_blank" class="detail-image-wrapper">
+                        <img src="../assets/img/projects/integral_project.png" alt="Flyer Especializacion Detallado">
+                        <div class="image-overlay-msg">
+                            <i class="fab fa-google-drive"></i> Ver en Google Drive
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/4_Especializacion_Brochure_Placeholder/view?usp=sharing" target="_blank" class="btn btn-secondary" style="width: 100%; margin-top: 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                        Descargar Brochure PDF <i class="fab fa-google-drive"></i>
+                    </a>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-main);"><i class="fas fa-clock"></i> Detalles del Programa:</h4>
+                        <ul style="list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-calendar-alt" style="color: var(--primary-color); width: 20px;"></i> Ruta de 3 meses en Vivo</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-laptop" style="color: var(--primary-color); width: 20px;"></i> Modalidad: Online En Vivo</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-award" style="color: var(--primary-color); width: 20px;"></i> Certificación Oficial de Data Academy</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-briefcase" style="color: var(--primary-color); width: 20px;"></i> Acceso a Bolsa de Trabajo & Asesoría CV</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enrollment CTA -->
+            <div class="syllabus-module" style="text-align: center; padding: 40px; background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, rgba(32, 184, 88, 0.05) 100%); border: 1px dashed var(--secondary-color);">
+                <i class="fab fa-whatsapp" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 16px;"></i>
+                <h3 style="margin-bottom: 8px;">¿Listo para impulsar tu carrera al siguiente nivel?</h3>
+                <p style="margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Conviértete en un profesional indispensable dominando todo el ciclo de vida del dato (Ingeniería + BI).</p>
+                <a href="https://wa.me/?text=Hola,%20quiero%20información%20de%20la%20Especialización%20en%20Ingeniería%20y%20Analítica%20de%20Datos" class="btn btn-primary" style="background-color: var(--secondary-color); border: none;" target="_blank">Postular a la Especialización <i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content" style="grid-template-columns: 1fr; text-align: center; gap: 24px;">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo" style="justify-content: center;"><i class="fas fa-chart-pie"></i> Data Academy</a>
+                <p>Transformando datos complejos en decisiones estratégicas claras a través de Power BI y Automatizaciones.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Data Academy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+
