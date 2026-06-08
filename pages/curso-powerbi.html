@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="icon" type="image/svg+xml" href="../assets/img/logo/logo-isotype.svg">
     <script>
-        (function() {
+        (function () {
             const theme = localStorage.getItem('theme');
             if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark-theme');
@@ -16,11 +17,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar scrolled" id="navbar">
@@ -37,7 +40,8 @@
                 <li><a href="biografia.html">Profesores</a></li>
                 <li><a href="../index.html#contacto" class="btn-primary-outline">Contacto</a></li>
             </ul>
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema"><i
+                    class="fas fa-moon"></i></button>
         </div>
     </nav>
 
@@ -47,7 +51,9 @@
             <a href="../index.html#formacion" class="btn-back"><i class="fas fa-arrow-left"></i> Volver a Formación</a>
             <div class="detail-header" style="display: flex; align-items: center; gap: 24px;">
                 <div class="course-logo" style="margin-bottom: 0; width: 80px; height: 80px;">
-                    <picture><source srcset="../assets/img/formation/powerbi_logo.webp" type="image/webp"><img loading="lazy" src="../assets/img/formation/powerbi_logo.png" alt="Power BI Icon" class="course-tool-logo">
+                    <picture>
+                        <source srcset="../assets/img/formation/powerbi_logo.webp" type="image/webp"><img loading="lazy"
+                            src="../assets/img/formation/powerbi_logo.png" alt="Power BI Icon" class="course-tool-logo">
                 </div>
                 <div>
                     <span class="course-tag" style="margin-bottom: 8px; display: inline-block;">Curso en Vivo</span>
@@ -64,19 +70,22 @@
                 <!-- Syllabus Side -->
                 <div class="info-side">
                     <h3 class="detail-section-title"><i class="fas fa-book-open"></i> Temario del Curso</h3>
-                    
+
                     <div class="syllabus-list">
                         <div class="syllabus-module">
                             <h4>Módulo 1: Modelado de Datos Avanzado</h4>
-                            <p>Diseño de esquemas en estrella y copo de nieve, tablas de hechos y dimensiones, y optimización de relaciones activas/inactivas para modelos robustos.</p>
+                            <p>Diseño de esquemas en estrella y copo de nieve, tablas de hechos y dimensiones, y
+                                optimización de relaciones activas/inactivas para modelos robustos.</p>
                         </div>
                         <div class="syllabus-module">
                             <h4>Módulo 2: DAX y Fórmulas Analíticas</h4>
-                            <p>Uso avanzado de funciones de filtro, cálculo contextual, variables, jerarquías y funciones de inteligencia de tiempo (YTD, QTD, Periodos Anteriores).</p>
+                            <p>Uso avanzado de funciones de filtro, cálculo contextual, variables, jerarquías y
+                                funciones de inteligencia de tiempo (YTD, QTD, Periodos Anteriores).</p>
                         </div>
                         <div class="syllabus-module">
                             <h4>Módulo 3: Visualización de Impacto & Storytelling</h4>
-                            <p>Principios de diseño visual, elección correcta de gráficos, UX en tableros, uso interactivo de marcadores (bookmarks) y narración efectiva con datos.</p>
+                            <p>Principios de diseño visual, elección correcta de gráficos, UX en tableros, uso
+                                interactivo de marcadores (bookmarks) y narración efectiva con datos.</p>
                         </div>
                     </div>
                 </div>
@@ -84,37 +93,55 @@
                 <!-- Download Brochure Side -->
                 <div class="visual-side">
                     <h3 class="detail-section-title"><i class="fas fa-download"></i> Descargar Brochure</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Haz clic en la imagen a continuación para abrir y descargar el brochure en PDF desde Google Drive.</p>
-                    
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Haz clic en la imagen a
+                        continuación para abrir y descargar el brochure en PDF desde Google Drive.</p>
+
                     <!-- Clickable image to download Brochure -->
-                    <a href="https://drive.google.com/file/d/1_PowerBI_Brochure_Placeholder/view?usp=sharing" target="_blank" class="detail-image-wrapper">
-                        <picture><source srcset="../assets/img/projects/dashboard.webp" type="image/webp"><img loading="lazy" src="../assets/img/projects/dashboard.png" alt="Flyer Power BI Curso Detallado">
-                        <div class="image-overlay-msg">
-                            <i class="fab fa-google-drive"></i> Ver en Google Drive
-                        </div>
+                    <a href="https://drive.google.com/file/d/1_PowerBI_Brochure_Placeholder/view?usp=sharing"
+                        target="_blank" class="detail-image-wrapper">
+                        <picture>
+                            <source srcset="../assets/img/projects/dashboard.webp" type="image/webp"><img loading="lazy"
+                                src="../assets/img/projects/dashboard.png" alt="Flyer Power BI Curso Detallado">
+                            <div class="image-overlay-msg">
+                                <i class="fab fa-google-drive"></i> Ver en Google Drive
+                            </div>
                     </a>
-                    
-                    <a href="https://drive.google.com/file/d/1_PowerBI_Brochure_Placeholder/view?usp=sharing" target="_blank" class="btn btn-secondary" style="width: 100%; margin-top: 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+
+                    <a href="https://drive.google.com/file/d/1_PowerBI_Brochure_Placeholder/view?usp=sharing"
+                        target="_blank" class="btn btn-secondary"
+                        style="width: 100%; margin-top: 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
                         Descargar Brochure PDF <i class="fab fa-google-drive"></i>
                     </a>
 
                     <div style="margin-top: 30px;">
-                        <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-main);"><i class="fas fa-clock"></i> Detalles del Curso:</h4>
+                        <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-main);"><i
+                                class="fas fa-clock"></i> Detalles del Curso:</h4>
                         <ul style="list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem;">
-                            <li style="margin-bottom: 8px;"><i class="fas fa-calendar-alt" style="color: var(--primary-color); width: 20px;"></i> Clases los Martes y Jueves</li>
-                            <li style="margin-bottom: 8px;"><i class="fas fa-laptop" style="color: var(--primary-color); width: 20px;"></i> Modalidad: Online En Vivo</li>
-                            <li style="margin-bottom: 8px;"><i class="fas fa-award" style="color: var(--primary-color); width: 20px;"></i> Certificado de Aprobación</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-calendar-alt"
+                                    style="color: var(--primary-color); width: 20px;"></i> Clases los Martes y Jueves
+                            </li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-laptop"
+                                    style="color: var(--primary-color); width: 20px;"></i> Modalidad: Online En Vivo
+                            </li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-award"
+                                    style="color: var(--primary-color); width: 20px;"></i> Certificado de Aprobación
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <!-- Enrollment CTA -->
-            <div class="syllabus-module" style="text-align: center; padding: 40px; background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, rgba(32, 184, 88, 0.05) 100%); border: 1px dashed var(--secondary-color);">
-                <i class="fab fa-whatsapp" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 16px;"></i>
+            <div class="syllabus-module"
+                style="text-align: center; padding: 40px; background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, rgba(32, 184, 88, 0.05) 100%); border: 1px dashed var(--secondary-color);">
+                <i class="fab fa-whatsapp"
+                    style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 16px;"></i>
                 <h3 style="margin-bottom: 8px;">¿Listo para iniciar tu formación en Power BI?</h3>
-                <p style="margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Reserva tu cupo hoy mismo a través de WhatsApp y obtén una tarifa con descuento de preventa.</p>
-                <a href="https://wa.me/?text=Hola,%20quiero%20inscribirme%20en%20el%20Curso%20de%20Power%20BI%20Avanzado" class="btn btn-primary" style="background-color: var(--secondary-color); border: none;" target="_blank">Conversar con un asesor <i class="fab fa-whatsapp"></i></a>
+                <p style="margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Reserva tu cupo
+                    hoy mismo a través de WhatsApp y obtén una tarifa con descuento de preventa.</p>
+                <a href="https://wa.me/51904882577?text=Hola,%20estoy%20interesado%20en%20capacitarme%20en%20POWERBI"
+                    class="btn btn-primary" style="background-color: var(--secondary-color); border: none;"
+                    target="_blank">Conversar con un asesor <i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </section>
@@ -124,9 +151,11 @@
         <div class="container footer-content" style="grid-template-columns: 1fr; text-align: center; gap: 24px;">
             <div class="footer-brand">
                 <a href="../index.html" class="logo" style="justify-content: center;">
-                    <img src="../assets/img/logo/logo-horizontal-dark.svg" style="height: 38px; width: auto;" alt="Data Academy">
+                    <img src="../assets/img/logo/logo-horizontal-dark.svg" style="height: 38px; width: auto;"
+                        alt="Data Academy">
                 </a>
-                <p>Transformando datos complejos en decisiones estratégicas claras a través de Power BI y Automatizaciones.</p>
+                <p>Transformando datos complejos en decisiones estratégicas claras a través de Power BI y
+                    Automatizaciones.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -135,5 +164,5 @@
     </footer>
     <script src="../assets/js/script.js"></script>
 </body>
-</html>
 
+</html>
