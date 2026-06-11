@@ -176,11 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================
     const projectsData = {
         p1: {
-            title: "Dashboard Gerencial SaaS",
+            title: "Dashboard Básico Power BI",
             category: "Power BI",
-            img: "assets/img/projects/pyt_power_bi_2.png",
-            desc: "Un panel de control ejecutivo integral diseñado para analizar las métricas de suscripción más críticas en empresas de software (SaaS). Permite evaluar el crecimiento mediante el MRR (Ingresos Recurrentes Mensuales), monitorear la retención con tasas de Churn y optimizar el gasto comercial analizando el CAC (Costo de Adquisición de Clientes) contra el LTV (Valor del Ciclo de Vida del Cliente).",
-            tools: ["Power BI", "DAX", "Power Query", "Excel"],
+            img: "assets/img/projects/proyecto_powerbi_dashboard.png",
+            desc: "Un tablero introductorio interactivo diseñado en Power BI para el control operativo e institucional. Permite monitorizar métricas comerciales y de ventas en tiempo real, facilitando la toma de decisiones basada en datos para perfiles técnicos y gerenciales.",
+            tools: ["Power BI", "Power Query", "Modelado de datos", "Excel"],
             courseUrl: "pages/curso-powerbi.html",
             courseName: "Curso: Power BI Avanzado & Storytelling"
         },
@@ -196,36 +196,36 @@ document.addEventListener('DOMContentLoaded', () => {
         p3: {
             title: "Automatización CRM & WhatsApp",
             category: "n8n",
-            img: "assets/img/projects/n8n_flow.png",
-            desc: "Flujo de integración y automatización empresarial diseñado en n8n. El proceso intercepta registros de formularios web (Typeform), valida y enriquece la información con APIs externas, la indexa en el CRM de HubSpot y dispara automáticamente mensajes personalizados a través de WhatsApp Webhook y correos transaccionales con SendGrid, reduciendo el tiempo de respuesta comercial a cero.",
+            img: "assets/img/projects/proyecto_n8n_flow.webp",
+            desc: "Flujo de integración y automatización empresarial diseñado en n8n. El proceso intercepta registros de formularios web, valida y enriquece la información con APIs externas, la indexa en el CRM de HubSpot y dispara automáticamente mensajes personalizados a través de WhatsApp Webhook y correos transaccionales, reduciendo el tiempo de respuesta comercial a cero.",
             tools: ["n8n", "APIs", "HubSpot", "WhatsApp API", "Webhooks"],
             courseUrl: "pages/curso-n8n.html",
             courseName: "Curso: Automatización de Procesos con n8n & Make"
         },
         p4: {
-            title: "Sincronización de Inventarios E-commerce",
-            category: "Make",
-            img: "assets/img/projects/automate_flow.png",
-            desc: "Pipeline de automatización que sincroniza existencias y precios entre el sistema de facturación interno (ERP) y la tienda electrónica Shopify en tiempo real. Construido en Make (anteriormente Interomat), incluye control de errores automatizado, reportes de discordancias de stock enviados a Slack e importación masiva de nuevos catálogos.",
-            tools: ["Make.com", "Shopify API", "JSON", "Slack API"],
-            courseUrl: "pages/curso-n8n.html",
-            courseName: "Curso: Automatización de Procesos con n8n & Make"
+            title: "Arquitectura de Medallón Lakehouse",
+            category: "Integral",
+            img: "assets/img/projects/proyecto_medallon.png",
+            desc: "Implementación moderna de arquitectura Medallón (Bronze, Silver y Gold) en un entorno de lago de datos. Garantiza la calidad de los datos a través de pipelines de limpieza y estructuración secuencial, preparando la información para analítica avanzada y reportería ejecutiva confiable.",
+            tools: ["n8n", "PostgreSQL", "SQL Server", "ETL", "Data Lake"],
+            courseUrl: "pages/especializacion-datos.html",
+            courseName: "Especialización: Ingeniería & Analítica de Datos"
         },
         p5: {
-            title: "Análisis Retail & Ventas",
+            title: "Proyecto Business Intelligence",
             category: "Power BI",
-            img: "assets/img/projects/pyt_power_bi_2.png",
-            desc: "Tablero analítico comercial que analiza las ventas de una cadena de retail nacional. Proporciona visualización detallada por sucursal, rendimiento de gerentes, análisis de canasta de compra e incorpora modelos predictivos sencillos hechos en DAX para proyectar la demanda de stock de los siguientes meses y evitar quiebres de inventario.",
+            img: "assets/img/projects/proyecto_powerbi_bi.png",
+            desc: "Tablero analítico comercial integral que analiza las ventas de una cadena de retail nacional. Proporciona visualización detallada por sucursal, rendimiento de gerentes, análisis de canasta de compra e incorpora modelos en DAX para proyectar y controlar los indicadores estratégicos del negocio.",
             tools: ["Power BI", "DAX", "Modelado en Estrella", "Data Wrangling"],
             courseUrl: "pages/curso-powerbi.html",
             courseName: "Curso: Power BI Avanzado & Storytelling"
         },
         p6: {
-            title: "Pipeline ETL & Dashboard Integral",
+            title: "Dashboard Gerencial Power BI",
             category: "Integral",
-            img: "assets/img/projects/integral_project.png",
-            desc: "El proyecto insignia del portafolio. Un desarrollo completo extremo a extremo (End-to-End). Los datos transaccionales se extraen automáticamente de fuentes externas mediante n8n, se transforman y cargan en una base de datos relacional PostgreSQL con vistas optimizadas. Finalmente, se consume esta información en Power BI para brindar una suite gerencial completamente automatizada en tiempo real.",
-            tools: ["n8n", "PostgreSQL", "SQL Server", "Power BI", "DAX", "ETL"],
+            img: "assets/img/projects/proyecto_powerbi_hero.png",
+            desc: "El proyecto insignia de visualización. Un desarrollo de dashboard gerencial interactivo de alto nivel que consume datos transaccionales previamente procesados y cargados. Diseñado bajo las mejores prácticas de Storytelling y UI/UX, permite a directivos evaluar la salud comercial e ingresos a golpe de vista.",
+            tools: ["Power BI", "DAX", "SQL Server", "ETL", "Storytelling"],
             courseUrl: "pages/especializacion-datos.html",
             courseName: "Especialización: Ingeniería & Analítica de Datos"
         }
@@ -253,9 +253,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!project) return;
 
         // Rellenar contenido con WebP si disponible
-        const webpSrc = project.img.replace('.png', '.webp');
         const modalImgWebp = document.getElementById('modal-project-img-webp');
-        if (modalImgWebp) modalImgWebp.srcset = webpSrc;
+        if (modalImgWebp) {
+            if (project.img.endsWith('.webp')) {
+                modalImgWebp.srcset = project.img;
+            } else if (project.img.includes('sql_project')) {
+                modalImgWebp.srcset = project.img.replace('.png', '.webp');
+            } else {
+                modalImgWebp.removeAttribute('srcset');
+            }
+        }
         modalImg.src = project.img;
         modalImg.alt = project.title;
         modalBadge.textContent = project.category;
@@ -363,6 +370,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             updateToggleIcons(isCurrentlyDark);
+        });
+    });
+
+    // =========================================
+    // Lógica del Catálogo de Cursos (Pestañas)
+    // =========================================
+    const catalogTabBtns = document.querySelectorAll('.catalog-tab-btn');
+    const catalogTabPanels = document.querySelectorAll('.catalog-tab-panel');
+
+    catalogTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            catalogTabBtns.forEach(b => b.classList.remove('active'));
+            catalogTabPanels.forEach(p => p.classList.remove('active'));
+
+            btn.classList.add('active');
+            const tabId = btn.getAttribute('data-tab');
+            const targetPanel = document.getElementById(tabId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
         });
     });
 });

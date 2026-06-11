@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <link rel="icon" type="image/svg+xml" href="../assets/img/logo/logo-isotype.svg">
+    <link rel="icon" type="image/png" href="../assets/img/logo/logo_oscuro.png">
     <script>
         (function () {
             const theme = localStorage.getItem('theme');
@@ -13,7 +13,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso SQL para Análisis de Datos | Data Academy</title>
+    <title>Curso SQL para Data Analyst (Básico - Intermedio) | Data Academy</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,8 +29,8 @@
     <nav class="navbar scrolled" id="navbar">
         <div class="container nav-container">
             <a href="../index.html" class="logo">
-                <img src="../assets/img/logo/logo-horizontal-light.svg" class="logo-light" alt="Data Academy">
-                <img src="../assets/img/logo/logo-horizontal-dark.svg" class="logo-dark" alt="Data Academy">
+                <img src="../assets/img/logo/logo_claro.png" class="logo-light" alt="Data Academy">
+                <img src="../assets/img/logo/logo_oscuro.png" class="logo-dark" alt="Data Academy">
             </a>
             <ul class="nav-links">
                 <li><a href="../index.html#inicio">Inicio</a></li>
@@ -52,12 +52,12 @@
             <div class="detail-header" style="display: flex; align-items: center; gap: 24px;">
                 <div class="course-logo" style="margin-bottom: 0; width: 80px; height: 80px;">
                     <picture>
-                        <source srcset="../assets/img/formation/sql_logo.webp" type="image/webp"><img loading="lazy"
-                            src="../assets/img/formation/sql_logo.png" alt="SQL Icon" class="course-tool-logo">
+                        <img loading="lazy"
+                            src="../assets/img/formation/sql.png" alt="SQL Icon" class="course-tool-logo">
                 </div>
                 <div>
                     <span class="course-tag" style="margin-bottom: 8px; display: inline-block;">Curso en Vivo</span>
-                    <h1>SQL para Análisis de Datos Basico</h1>
+                    <h1>SQL para Data Analyst (Básico - Intermedio)</h1>
                 </div>
             </div>
         </div>
@@ -73,20 +73,36 @@
 
                     <div class="syllabus-list">
                         <div class="syllabus-module">
-                            <h4>Módulo 1: Diseño Relacional y Sintaxis Base</h4>
-                            <p>Entendimiento de bases de datos relacionales, tipos de relaciones, comandos de consulta
-                                SELECT, filtros WHERE y agrupaciones GROUP BY.</p>
+                            <h4>Módulo 1: Introducción a Bases de Datos y Modelamiento</h4>
+                            <p>Aprende los fundamentos desde cero, incluyendo la definición de modelos (conceptual, lógico y físico), componentes como entidades y atributos, creación de diagramas ER y la normalización de tablas.</p>
                         </div>
                         <div class="syllabus-module">
-                            <h4>Módulo 2: Consultas Complejas & Joins</h4>
-                            <p>Manejo de combinaciones de tablas (INNER, LEFT, RIGHT JOIN), subconsultas, expresiones de
-                                tabla común (CTEs) y vistas.</p>
+                            <h4>Módulo 2: Lenguaje Transact SQL y Funciones Nativas</h4>
+                            <p>Domina el uso de funciones de agregación clave (Count, max, min, sum, avg), además de implementar funciones específicas para el manejo de tipos de datos de fecha, texto y matemáticas.</p>
                         </div>
                         <div class="syllabus-module">
-                            <h4>Módulo 3: Funciones Analíticas de Ventana</h4>
-                            <p>Implementación de funciones avanzadas de analítica: `PARTITION BY`, calculadoras de
-                                ranking `DENSE_RANK()`, acumuladores móviles y comparaciones intermensuales
-                                (`LAG`/`LEAD`).</p>
+                            <h4>Módulo 3: Manipulación de Datos y Estructuras de Control</h4>
+                            <p>Conoce cómo operar sobre tu base de datos ejecutando consultas condicionales mediante el uso de comandos fundamentales como select, insert, update, delete, from, where, group by y order by.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Módulo 4: Operadores Lógicos y Sentencias Avanzadas</h4>
+                            <p>Profundiza en la lógica de las consultas aplicando operadores lógicos (and, or, not, in, like, between) y domina el uso avanzado de sentencias como CAST, CASE WHEN y Group By.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Módulo 5: Relaciones y Consulta de Múltiples Tablas (JOINS)</h4>
+                            <p>Aprende a conectar y cruzar información entre diferentes tablas dominando todos los tipos de uniones: Inner Join, Outer Join, Cross Join y Left Join.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Módulo 6: Subconsultas y Funciones de Ventana</h4>
+                            <p>Da el salto al análisis avanzado implementando Common Table Expressions (CTEs) y comparando su uso frente a las Window Functions, incluyendo funciones de Ranking y agregativas.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Módulo 7: Resolución de Casos Prácticos y Prueba Técnica</h4>
+                            <p>Pon a prueba lo aprendido a través de una sesión de repaso intensiva y el desarrollo de una prueba técnica real diseñada para evaluar tus habilidades analíticas.</p>
+                        </div>
+                        <div class="syllabus-module">
+                            <h4>Módulo 8: Automatización de Reportes (Bonus Track)</h4>
+                            <p>Aprende las mejores prácticas para automatizar la ejecución y entrega de tus reportes en SQL, integrando soluciones de forma nativa o mediante Python. (Bonus Track)</p>
                         </div>
                     </div>
                 </div>
@@ -104,9 +120,7 @@
                             <source srcset="../assets/img/projects/sql_project.webp" type="image/webp"><img
                                 loading="lazy" src="../assets/img/projects/sql_project.png"
                                 alt="Flyer SQL Curso Detallado">
-                            <div class="image-overlay-msg">
-                                <i class="fab fa-google-drive"></i> Ver en Google Drive
-                            </div>
+                        </picture>
                     </a>
 
                     <a href="https://drive.google.com/file/d/2_SQL_Brochure_Placeholder/view?usp=sharing"
@@ -120,7 +134,7 @@
                                 class="fas fa-clock"></i> Detalles del Curso:</h4>
                         <ul style="list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem;">
                             <li style="margin-bottom: 8px;"><i class="fas fa-calendar-alt"
-                                    style="color: var(--primary-color); width: 20px;"></i> Lunes y Miércoles</li>
+                                    style="color: var(--primary-color); width: 20px;"></i> Martes y Jueves, 7:30 PM - 10:00 PM</li>
                             <li style="margin-bottom: 8px;"><i class="fas fa-laptop"
                                     style="color: var(--primary-color); width: 20px;"></i> Modalidad: Online En Vivo
                             </li>
@@ -152,7 +166,7 @@
         <div class="container footer-content" style="grid-template-columns: 1fr; text-align: center; gap: 24px;">
             <div class="footer-brand">
                 <a href="../index.html" class="logo" style="justify-content: center;">
-                    <img src="../assets/img/logo/logo-horizontal-dark.svg" style="height: 38px; width: auto;"
+                    <img src="../assets/img/logo/logo_oscuro.png" style="height: 38px; width: auto;"
                         alt="Data Academy">
                 </a>
                 <p>Transformando datos complejos en decisiones estratégicas claras a través de Power BI y

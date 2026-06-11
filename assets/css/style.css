@@ -1500,8 +1500,19 @@ html.dark-theme .syllabus-module {
     border-color: var(--border-color) !important;
 }
 html.dark-theme .syllabus-module:hover {
-    border-color: var(--primary-light) !important;
+    border-color: var(--accent-color) !important;
 }
+
+/* Títulos h4 de módulos: blanco + negrita para contraste en dark */
+html.dark-theme .syllabus-module h4 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+html.dark-theme .syllabus-module p {
+    color: #c8d6e8 !important;
+}
+
 html.dark-theme .detail-image-wrapper {
     border-color: var(--border-color);
 }
@@ -1515,6 +1526,7 @@ html.dark-theme .modal-image-side {
 html.dark-theme .tools-tags span {
     background-color: var(--bg-light);
     border-color: var(--border-color);
+    color: #e0e8f4;
 }
 html.dark-theme .hero-carousel {
     background-color: #071224;
@@ -1537,10 +1549,55 @@ html.dark-theme .card-img-wrapper::before {
     border-bottom-color: #1b355a;
 }
 
-/* Modo oscuro para los tags de curso */
+/* ---- Tarjetas de Proyectos: contraste en dark (solo texto) ---- */
+/* Título h3 de card blanco + negrita */
+html.dark-theme .card-content h3 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+/* Descripción de card: gris claro legible */
+html.dark-theme .card-content p {
+    color: #b8c9e0 !important;
+}
+/* Enlace "Ver Detalle" visible */
+html.dark-theme .card-content .btn-link {
+    color: var(--accent-color) !important;
+}
+html.dark-theme .card-content .btn-link:hover {
+    color: #ffffff !important;
+}
+
+/* Modo oscuro para los tags de curso (Curso en Vivo, En Vivo, Especialización) */
 html.dark-theme .course-tag {
-    background: rgba(0, 188, 212, 0.15);
-    color: var(--accent-color);
+    background: rgba(0, 188, 212, 0.22) !important;
+    color: #00e5f5 !important;          /* cyan brillante — máximo contraste */
+    font-weight: 700 !important;
+    border: 1px solid rgba(0, 188, 212, 0.35);
+}
+
+/* Featured card: fondo oscuro en dark mode (override inline style) */
+html.dark-theme .course-card.featured {
+    background: linear-gradient(135deg, #102444 0%, #071224 100%) !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* Títulos h3 en course-card en dark */
+html.dark-theme .course-card h3 {
+    color: #ffffff !important;
+}
+html.dark-theme .course-desc {
+    color: #b8c9e0 !important;
+}
+html.dark-theme .course-features li {
+    color: #dce8f5 !important;
+}
+
+/* Section headers en dark */
+html.dark-theme .section-header h2 {
+    color: #ffffff;
+}
+html.dark-theme .section-header p {
+    color: #a5b8cc;
 }
 
 /* Botón de Alternancia de Tema (Sleek Theme Toggle Button) */
@@ -1622,6 +1679,140 @@ html.dark-theme .btn-secondary:has(.fa-whatsapp):hover {
 
 html.dark-theme .btn-secondary:has(.fa-whatsapp):hover i.fa-whatsapp {
     color: white !important;
+}
+
+/* =========================================
+   Estilos de Catálogo de Cursos (Pestañas)
+   ========================================= */
+.catalog-tabs-container {
+    margin-top: 30px;
+    width: 100%;
+}
+.catalog-tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+}
+.catalog-tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+.catalog-tab-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+}
+.catalog-tab-btn.active {
+    color: white;
+    background-color: var(--primary-color);
+}
+html.dark-theme .catalog-tab-btn.active {
+    color: var(--primary-dark);
+    background-color: var(--accent-color);
+}
+
+.catalog-tab-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.catalog-tab-panel.active {
+    display: block;
+    opacity: 1;
+}
+
+.course-grid-catalog {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+@media (max-width: 992px) {
+    .course-grid-catalog {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sale-badge-pill {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.sale-badge-red {
+    background-color: rgba(255, 74, 74, 0.1);
+    color: #ff4a4a;
+    border: 1px solid #ff4a4a;
+}
+.sale-badge-blue {
+    background-color: rgba(0, 188, 212, 0.1);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+.sale-badge-green {
+    background-color: rgba(37, 211, 102, 0.1);
+    color: #25D366;
+    border: 1px solid #25D366;
+}
+
+/* Combos & Cross-Selling Table Styles */
+.combos-section {
+    margin-top: 60px;
+    background: var(--bg-light);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+}
+.combos-table-wrapper {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+.combos-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.combos-table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    font-weight: 700;
+}
+html.dark-theme .combos-table th {
+    background-color: var(--primary-dark);
+    color: var(--accent-color);
+}
+.combos-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+.combos-table tr:hover {
+    background-color: rgba(0, 188, 212, 0.03);
+}
+html.dark-theme .combos-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+.combo-highlight {
+    font-weight: 800;
+    color: var(--primary-color);
+}
+html.dark-theme .combo-highlight {
+    color: var(--accent-color);
 }
 
 
