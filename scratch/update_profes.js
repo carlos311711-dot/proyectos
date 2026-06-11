@@ -1,62 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <link rel="icon" type="image/png" href="../assets/img/logo/favicon_square.png">
-    <script>
-        (function() {
-            const theme = localStorage.getItem('theme');
-            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark-theme');
-            }
-        })();
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipo Docente | Data Academy</title>
-    <meta name="description" content="Conoce a los profesores y al fundador de Data Academy. Especialistas certificados en Business Intelligence, SQL e Ingeniería de Datos.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar scrolled" id="navbar">
-        <div class="container nav-container">
-            <a href="../index.html" class="logo">
-                <img src="../assets/img/logo/logo_claro.png" class="logo-light" alt="Data Academy">
-                <img src="../assets/img/logo/logo_oscuro.png" class="logo-dark" alt="Data Academy">
-            </a>
-            <ul class="nav-links">
-                <li><a href="../index.html#inicio">Inicio</a></li>
-                <li><a href="../index.html#proyectos">Proyectos</a></li>
-                <li><a href="../landing-ventas.html">Precios Cursos</a></li>
-                <li><a href="#" class="active">Profesores</a></li>
-                <li><a href="../index.html#contacto" class="btn-primary-outline">Contacto</a></li>
-            </ul>
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
-        </div>
-    </nav>
+const fs = require('fs');
 
-    <!-- Header -->
-    <header class="detail-hero" style="padding: 130px 0 60px;">
-        <div class="container detail-container">
-            <a href="../index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
-            <div class="detail-header">
-                <span class="course-tag" style="background-color: var(--primary-color); color: white; margin-bottom: 12px; display: inline-block;">Nuestro Equipo</span>
-                <h1>Conoce a tus Instructores</h1>
-                <p style="margin-bottom: 0; font-size: 1.15rem; color: var(--text-muted);">Profesionales de la industria comprometidos en acelerar tu aprendizaje técnico y de negocio.</p>
-            </div>
-        </div>
-    </header>
+const bioFile = 'c:/HOME LOCAL/PROYECTOS/Antigravity/proyectos/pages/biografia.html';
+let content = fs.readFileSync(bioFile, 'utf8');
 
-    <!-- Profiles Content -->
-    <section class="detail-content" style="background-color: var(--bg-main);">
-        <div class="container detail-container" style="max-width: 900px;">
-            
+const newProfiles = `
             <!-- Profile 1: Jhon Velasque -->
             <div class="detail-grid" style="grid-template-columns: 1fr 1.8fr; gap: 40px; margin-bottom: 80px; align-items: flex-start;">
                 <div>
@@ -64,7 +11,7 @@
                         <img src="../assets/img/profes/1.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" alt="Jhon Velasque">
                     </div>
                     <div style="margin-top: 20px; text-align: center;">
-                        <span class="badge" style="position: static; display: inline-block;  margin-bottom: 8px;">Instructor Excel & SQL</span>
+                        <span class="badge" style="position: static; display: inline-block; background-color: var(--primary-color); margin-bottom: 8px;">Instructor Excel & SQL</span>
                         <h3 style="margin-bottom: 4px; font-weight: 700; color: var(--text-main);">Jhon Velasque</h3>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Data Analytics Engineer en RIMAC Seguros</p>
                     </div>
@@ -93,7 +40,7 @@
                         <img src="../assets/img/profes/2.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" alt="Richard Ñahui">
                     </div>
                     <div style="margin-top: 20px; text-align: center;">
-                        <span class="badge" style="position: static; display: inline-block;  margin-bottom: 8px;">Instructor SQL Engineer</span>
+                        <span class="badge" style="position: static; display: inline-block; background-color: var(--primary-dark); margin-bottom: 8px;">Instructor SQL Engineer</span>
                         <h3 style="margin-bottom: 4px; font-weight: 700; color: var(--text-main);">Richard Ñahui</h3>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Data Engineer en vooxell</p>
                     </div>
@@ -121,7 +68,7 @@
                         <img src="../assets/img/profes/3.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" alt="Junior Candela">
                     </div>
                     <div style="margin-top: 20px; text-align: center;">
-                        <span class="badge" style="position: static; display: inline-block;   margin-bottom: 8px;">Instructor Power BI</span>
+                        <span class="badge" style="position: static; display: inline-block; background-color: #f2c811; color: #000; margin-bottom: 8px;">Instructor Power BI</span>
                         <h3 style="margin-bottom: 4px; font-weight: 700; color: var(--text-main);">Junior Candela</h3>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Data Analytics Engineer en JOCKEYPLAZA</p>
                     </div>
@@ -149,7 +96,7 @@
                         <img src="../assets/img/profes/4.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" alt="Christian Condori">
                     </div>
                     <div style="margin-top: 20px; text-align: center;">
-                        <span class="badge" style="position: static; display: inline-block;  margin-bottom: 8px;">Instructor Python</span>
+                        <span class="badge" style="position: static; display: inline-block; background-color: #3776ab; margin-bottom: 8px;">Instructor Python</span>
                         <h3 style="margin-bottom: 4px; font-weight: 700; color: var(--text-main);">Christian Condori</h3>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Data Engineer en bluetab (an IBM Company)</p>
                     </div>
@@ -165,31 +112,11 @@
                         <span>Python + PySpark</span>
                     </div>
                 </div>
-            </div><!-- Quick CTA -->
-            <div class="syllabus-module" style="text-align: center; padding: 40px; margin-top: 60px; background: linear-gradient(135deg, rgba(0, 82, 204, 0.05) 0%, rgba(76, 154, 255, 0.05) 100%); border: 1px dashed var(--primary-color);">
-                <i class="fas fa-graduation-cap" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 16px;"></i>
-                <h3 style="margin-bottom: 8px;">Aprende de la mano de expertos activos en la industria</h3>
-                <p style="margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Accede a metodologías prácticas y eleva tu cotización laboral de inmediato. ¡Cupos limitados por curso!</p>
-                <a href="../landing-ventas.html" class="btn btn-primary">Ver Ofertas y Precios de Cursos</a>
             </div>
-        </div>
-    </section>
+`;
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content" style="grid-template-columns: 1fr; text-align: center; gap: 24px;">
-            <div class="footer-brand">
-                <a href="../index.html" class="logo" style="justify-content: center;">
-                    <img src="../assets/img/logo/logo_oscuro.png" style="height: 38px; width: auto;" alt="Data Academy">
-                </a>
-                <p>Transformando datos complejos en decisiones estratégicas claras a través de Power BI y Automatizaciones.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Data Academy. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    <script src="../assets/js/script.js"></script>
-</body>
-</html>
+// Regex to replace from Profile 1 up to the Quick CTA
+content = content.replace(/<!-- Profile 1: Founder -->[\s\S]*?(?=<!-- Quick CTA -->)/, newProfiles + '\\n            ');
 
+fs.writeFileSync(bioFile, content, 'utf8');
+console.log('biografia.html updated');

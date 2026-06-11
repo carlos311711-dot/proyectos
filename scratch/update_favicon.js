@@ -23,14 +23,13 @@ const htmlFiles = getHtmlFiles(projectDir);
 for (const file of htmlFiles) {
     let content = fs.readFileSync(file, 'utf8');
     
-    // Replace 7Antigravity.png favicon with the logo_oscuro.png favicon
-    // E.g. <link rel="icon" type="image/png" href="assets/img/formation/7Antigravity.png">
+    // Replace logo_oscuro.png favicon with favicon_square.png
     
-    content = content.replace(/<link rel="icon" type="image\/png" href="[^"]*7Antigravity\.png">/g, (match) => {
+    content = content.replace(/<link rel="icon" type="image\/png" href="[^"]*logo_oscuro\.png">/g, (match) => {
         if (match.includes('../')) {
-            return '<link rel="icon" type="image/png" href="../assets/img/logo/logo_oscuro.png">';
+            return '<link rel="icon" type="image/png" href="../assets/img/logo/favicon_square.png">';
         } else {
-            return '<link rel="icon" type="image/png" href="assets/img/logo/logo_oscuro.png">';
+            return '<link rel="icon" type="image/png" href="assets/img/logo/favicon_square.png">';
         }
     });
     
