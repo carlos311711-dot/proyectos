@@ -100,6 +100,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateDashboard();
             });
         }
+
+        // Acciones para los botones de combos más vendidos
+        const btnComboAnalista = document.getElementById('btn-combo-analista');
+        const btnComboEngineer = document.getElementById('btn-combo-engineer');
+
+        if (btnComboAnalista) {
+            btnComboAnalista.addEventListener('click', () => {
+                activeCourseIds = ['5', '1', '6'];
+                renderSelectors();
+                updateDashboard();
+            });
+        }
+
+        if (btnComboEngineer) {
+            btnComboEngineer.addEventListener('click', () => {
+                activeCourseIds = ['3', '2', '6'];
+                renderSelectors();
+                updateDashboard();
+            });
+        }
     }
 
     // =========================================

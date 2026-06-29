@@ -813,62 +813,64 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 10px !important;
+            }
             .calendar-card {
-                padding: 16px;
-                border-radius: 16px;
+                padding: 10px !important;
+                border-radius: 12px !important;
+                overflow: visible !important;
             }
             .calendar-header h3 {
-                font-size: 1.25rem;
+                font-size: 1.2rem;
             }
             .calendar-legend {
-                gap: 8px;
+                gap: 6px;
             }
             .legend-item {
                 font-size: 0.72rem;
             }
             .calendar-weekdays {
-                font-size: 0.75rem;
+                font-size: 0.72rem;
+            }
+            .calendar-grid {
+                gap: 4px !important;
             }
             .calendar-day {
-                padding: 4px;
-                border-radius: 8px;
+                padding: 2px 4px !important;
+                border-radius: 6px !important;
+                min-height: 52px !important;
             }
             .day-number {
-                font-size: 0.8rem;
+                font-size: 0.7rem !important;
             }
             .class-badge {
-                font-size: 0.58rem;
-                padding: 1px 2px;
-                border-radius: 4px;
+                font-size: 0.5rem !important;
+                padding: 1px 0px !important;
+                margin-bottom: 2px !important;
+                border-radius: 2px !important;
+            }
+            .class-badge .desktop-text {
+                display: none !important;
+            }
+            .class-badge .mobile-text {
+                display: inline !important;
+            }
+            .tab-btn {
+                padding: 8px 12px !important;
+                font-size: 0.8rem !important;
             }
         }
 
         @media (max-width: 480px) {
-            .calendar-card {
-                padding: 10px;
-                border-radius: 12px;
+            .container {
+                padding: 0 6px !important;
             }
-            .calendar-grid {
-                gap: 4px;
+            .calendar-card {
+                padding: 6px !important;
             }
             .calendar-day {
-                padding: 2px;
-                border-radius: 6px;
-            }
-            .day-number {
-                font-size: 0.7rem;
-            }
-            .class-badge {
-                font-size: 0.52rem;
-                padding: 1px 0px;
-                margin-bottom: 2px;
-                border-radius: 2px;
-            }
-            .class-badge .desktop-text {
-                display: none;
-            }
-            .class-badge .mobile-text {
-                display: inline !important;
+                min-height: 46px !important;
             }
         }
     </style>
@@ -915,9 +917,13 @@
             <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 12px;">
                 <i class="fas fa-info-circle text-accent"></i> Haz clic en uno o más cursos en los botones de abajo para activar/desactivar sus calendarios. El sistema detectará cruces de horarios.
             </p>
-            <div style="display: flex; gap: 10px; justify-content: center;">
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px;">
                 <button class="btn btn-sm btn-secondary" id="btn-select-all" style="padding: 6px 12px; font-size: 0.8rem;">Seleccionar Todos</button>
                 <button class="btn btn-sm btn-secondary" id="btn-clear-selection" style="padding: 6px 12px; font-size: 0.8rem;">Limpiar Selección</button>
+            </div>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-sm btn-accent" id="btn-combo-analista" style="padding: 8px 14px; font-size: 0.8rem; font-weight: 700; background-color: var(--accent-color); color: var(--primary-dark) !important;"><i class="fas fa-graduation-cap"></i> Recién estoy empezando (Excel + SQL Básico + Python)</button>
+                <button class="btn btn-sm btn-accent" id="btn-combo-engineer" style="padding: 8px 14px; font-size: 0.8rem; font-weight: 700; background-color: var(--accent-color); color: var(--primary-dark) !important;"><i class="fas fa-briefcase"></i> Tengo experiencia (Power BI + SQL Avanzado + Python)</button>
             </div>
         </div>
 
