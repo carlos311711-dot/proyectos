@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '3': 'course-pbi',         // POWER BI BASICO-INTERMEDIO (Yellow)
         '1': 'course-sql-basic',   // SQL BASICO-INTERMEDIO (Green)
         '2': 'course-sql-adv',     // SQL INTERMEDIO-AVANZADO (Teal)
-        '6': 'course-python'       // PYTHON FOR DATA ANALYST (Blue)
+        '6': 'course-python',      // PYTHON FOR DATA ANALYST (Blue)
+        '4': 'course-automate'     // POWER AUTOMATE y N8N (Orange/Coral)
     };
 
     // Configuración de Logos de Tecnologías
@@ -16,13 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         '3': 'assets/img/formation/4Powerbi.png',
         '1': 'assets/img/formation/sql.png',
         '2': 'assets/img/formation/sql.png',
-        '6': 'assets/img/formation/5Python.png'
+        '6': 'assets/img/formation/5Python.png',
+        '4': 'assets/img/formation/6n8n.png'
     };
 
     let coursesData = [];
     let syllabusData = [];
     let computedCourses = [];
-    let activeCourseIds = ['5', '3', '1', '2', '6']; // Todos seleccionados por defecto al inicio
+    let activeCourseIds = ['5', '3', '1', '2', '6', '4']; // Todos seleccionados por defecto al inicio
     let conflictsList = [];
 
     // Inicializar carga
@@ -346,6 +348,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Renderizar Calendario para Agosto 2026 (Mes 7)
         renderCalendarGrid(2026, 7);
+
+        // Actualizar estado activo de los botones de combos
+        const arraysMatch = (arr1, arr2) => {
+            if (arr1.length !== arr2.length) return false;
+            const s1 = [...arr1].sort();
+            const s2 = [...arr2].sort();
+            return s1.every((v, i) => v === s2[i]);
+        };
+
+        const btnComboAnalista = document.getElementById('btn-combo-analista');
+        const btnComboEngineer = document.getElementById('btn-combo-engineer');
+        
+        if (btnComboAnalista) {
+            if (arraysMatch(activeCourseIds, ['5', '1', '6'])) {
+                btnComboAnalista.classList.add('active');
+            } else {
+                btnComboAnalista.classList.remove('active');
+            }
+        }
+        
+        if (btnComboEngineer) {
+            if (arraysMatch(activeCourseIds, ['3', '2', '6'])) {
+                btnComboEngineer.classList.add('active');
+            } else {
+                btnComboEngineer.classList.remove('active');
+            }
+        }
 
         // Actualizar vistas informativas
         const infoSection = document.getElementById('course-info-card');

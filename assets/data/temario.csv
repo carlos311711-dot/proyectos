@@ -39,3 +39,11 @@ PYTHON FOR DATA ANALYST,5,Agrupación y Combinación de DataFrames,Uso del méto
 PYTHON FOR DATA ANALYST,6,Visualización Científica con Matplotlib y Seaborn,Creación de gráficos de barras, dispersión, histogramas y mapas de calor personalizados.
 PYTHON FOR DATA ANALYST,7,Análisis de Series Temporales y Automatización de Archivos,Manipulación de objetos datetime en Pandas y exportación automática a múltiples hojas de Excel formateadas.
 PYTHON FOR DATA ANALYST,8,Proyecto Final: Análisis Exploratorio de Datos (EDA),Carga de un dataset real, limpieza, formulación de hipótesis, visualización y obtención de conclusiones de negocio.
+POWER AUTOMATE y N8N,1,Introducción a la Automatización y Fundamentos de APIs,Conceptos clave de automatización, llamadas HTTP GET/POST, headers y autenticación.
+POWER AUTOMATE y N8N,2,Captura de Datos en Tiempo Real con Webhooks,Configuración y recepción de Webhooks de múltiples plataformas externas.
+POWER AUTOMATE y N8N,3,Modelado de Flujos de Trabajo en n8n,Diseño de flujos lógicos estructurados, condicionales y flujos multi-rama.
+POWER AUTOMATE y N8N,4,Manipulación de Datos y JSON Avanzado en n8n,Uso de expresiones, funciones de datos y formateo avanzado de estructuras JSON.
+POWER AUTOMATE y N8N,5,Introducción a Power Automate de Microsoft,Configuración de flujos automatizados de escritorio y en la nube con Office 365.
+POWER AUTOMATE y N8N,6,Integración del Ecosistema Microsoft y SharePoint,Lectura de archivos, envío de correos automatizados e integración con SharePoint.
+POWER AUTOMATE y N8N,7,Conexión de IA y Modelos de Lenguaje en Flujos,Llamadas automatizadas a la API de OpenAI para procesamiento de texto inteligente.
+POWER AUTOMATE y N8N,8,Proyecto Integrador de Automatización Completa,Desarrollo de un flujo end-to-end conectando Excel, SharePoint, n8n y notificaciones.

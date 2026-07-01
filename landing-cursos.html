@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario Académico y Cursos | Data Academy</title>
     <meta name="description"
-        content="Explora el calendario académico de la 4ta edición de cursos en vivo de Data Academy. Excel, SQL, Power BI y Python.">
+        content="Explora el calendario académico de la 4ta edición de cursos en vivo de Data Academy. Excel, SQL, Power BI, Python y Power Automate & n8n.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,6 +89,23 @@
             color: var(--primary-dark) !important;
         }
 
+        /* Combo buttons styling with custom interactivity */
+        .combo-btn {
+            border: 2px solid var(--accent-color) !important;
+            background-color: transparent !important;
+            color: var(--accent-color) !important;
+            transition: var(--transition);
+        }
+        .combo-btn:hover {
+            background-color: rgba(0, 188, 212, 0.1) !important;
+            transform: translateY(-2px);
+        }
+        .combo-btn.active {
+            background-color: var(--accent-color) !important;
+            color: var(--primary-dark) !important;
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+        }
+
         .color-dot {
             width: 10px;
             height: 10px;
@@ -102,6 +119,7 @@
         .border-course-sql-basic { border-left: 3px solid #2ec4b6; }
         .border-course-sql-adv { border-left: 3px solid #00b4d8; }
         .border-course-python { border-left: 3px solid #0077b6; }
+        .border-course-automate { border-left: 3px solid #f05a28; }
 
         /* Dashboard Workspace Grid */
         .dashboard-grid {
@@ -337,6 +355,7 @@
             --sql-basic-text: #007a6e;
             --sql-adv-text: #006880;
             --python-text: #005086;
+            --automate-text: #e64a19;
         }
 
         html.dark-theme {
@@ -345,6 +364,7 @@
             --sql-basic-text: #6ee7b7;
             --sql-adv-text: #7dd3fc;
             --python-text: #93c5fd;
+            --automate-text: #ff8a65;
         }
 
         /* Course colors */
@@ -397,6 +417,16 @@
             color: #ffffff !important;
         }
         .font-course-python { color: var(--python-text) !important; }
+
+        .course-automate {
+            background-color: rgba(240, 90, 40, 0.08) !important;
+            border: 1px solid rgba(240, 90, 40, 0.4) !important;
+        }
+        .course-automate .class-badge {
+            background-color: #f05a28 !important;
+            color: #ffffff !important;
+        }
+        .font-course-automate { color: var(--automate-text) !important; }
 
         /* Style for conflict cells (cruces) */
         .calendar-day.cruce-conflict {
@@ -520,6 +550,7 @@
         .class-dot.course-sql-basic { background-color: #2ec4b6 !important; }
         .class-dot.course-sql-adv { background-color: #00b4d8 !important; }
         .class-dot.course-python { background-color: #0077b6 !important; }
+        .class-dot.course-automate { background-color: #f05a28 !important; }
 
         .multi-tooltip-row {
             padding: 6px 0;
@@ -535,6 +566,7 @@
         .bullet-course-sql-basic { color: #2ec4b6; }
         .bullet-course-sql-adv { color: #00b4d8; }
         .bullet-course-python { color: #0077b6; }
+        .bullet-course-automate { color: #f05a28; }
 
         /* Course Detail Card Styling */
         .info-card {
@@ -668,6 +700,7 @@
         .class-num-bubble.course-sql-basic { background-color: #2ec4b6 !important; }
         .class-num-bubble.course-sql-adv { background-color: #00b4d8 !important; }
         .class-num-bubble.course-python { background-color: #0077b6 !important; }
+        .class-num-bubble.course-automate { background-color: #f05a28 !important; }
 
         /* Light Mode headings contrast */
         html:not(.dark-theme) h2,
@@ -860,6 +893,10 @@
                 padding: 8px 12px !important;
                 font-size: 0.8rem !important;
             }
+            .combo-btn {
+                padding: 6px 12px !important;
+                font-size: 0.75rem !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -922,8 +959,8 @@
                 <button class="btn btn-sm btn-secondary" id="btn-clear-selection" style="padding: 6px 12px; font-size: 0.8rem;">Limpiar Selección</button>
             </div>
             <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                <button class="btn btn-sm btn-accent" id="btn-combo-analista" style="padding: 8px 14px; font-size: 0.8rem; font-weight: 700; background-color: var(--accent-color); color: var(--primary-dark) !important;"><i class="fas fa-graduation-cap"></i> Recién estoy empezando (Excel + SQL Básico + Python)</button>
-                <button class="btn btn-sm btn-accent" id="btn-combo-engineer" style="padding: 8px 14px; font-size: 0.8rem; font-weight: 700; background-color: var(--accent-color); color: var(--primary-dark) !important;"><i class="fas fa-briefcase"></i> Tengo experiencia (Power BI + SQL Avanzado + Python)</button>
+                <button class="btn btn-sm combo-btn" id="btn-combo-analista"><i class="fas fa-graduation-cap"></i> Estoy empezando</button>
+                <button class="btn btn-sm combo-btn" id="btn-combo-engineer"><i class="fas fa-briefcase"></i> Tengo experiencia</button>
             </div>
         </div>
 
